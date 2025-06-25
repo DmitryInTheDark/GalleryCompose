@@ -34,7 +34,7 @@ fun MakeScreen(navController: NavController){
             horizontalArrangement = Arrangement.SpaceEvenly,
             verticalAlignment = Alignment.CenterVertically) {
             Button(colors = ButtonDefaults.buttonColors(BlueLight),
-                onClick = {navController.navigate("makePhoto")}) {
+                onClick = {Toast.makeText(context, "Вылезло разрешение, галерея", Toast.LENGTH_SHORT).show()}) {
                 Column(modifier = Modifier.fillMaxHeight(),
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement = Arrangement.SpaceEvenly) {
@@ -45,7 +45,7 @@ fun MakeScreen(navController: NavController){
 
             }
             Button(colors = ButtonDefaults.buttonColors(BlueLight),
-                onClick = { Toast.makeText(context, "Вылезло разрешение, галерея", Toast.LENGTH_SHORT).show()}) {
+                onClick = { navController.navigate("makePhoto")}) {
                 Column(modifier = Modifier.fillMaxHeight(),
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement = Arrangement.SpaceEvenly) {
